@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<input type="text" id="num1">
+<button type="button" id="but1">tìm kiếm</button>
+<p id="result"></p>
+
+<script>
+    let string = document.getElementById('num1').value;
+    let button1 = document.getElementById('but1');
+    let index=0;
+    button1.addEventListener('click', search);
+    let arrVie = ['xanh', 'do', 'tim', 'vang'];
+    let arrEng = ['green', 'red', 'violet', 'yellow'];
+
+    function search() {
+        for (let i = 0; i < arrVie.length; i++) {
+            if (string == arrVie[i]) {
+                index= i;
+            }
+            for (let j=0; j< arrEng.length;j++) {
+                if (index==j) {
+                    result=arrEng[j];
+                }
+            } document.getElementById('result').innerHTML=result;
+        }
+
+
+    }
+</script>
+</body>
+</html>
